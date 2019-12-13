@@ -8,7 +8,7 @@ function PlayerPreview(props) {
         <img
           className="avatar"
           src={props.avatar}
-          alt={'Avatar for ' + props.username}
+          alt={`Avatar for ${props.username}`}
         />
         <h2 className="username">@{props.username}</h2>
       </div>

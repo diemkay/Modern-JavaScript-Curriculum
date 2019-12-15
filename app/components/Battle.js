@@ -1,7 +1,7 @@
-var React = require('react');
-var PropTypes = require('prop-types');
-var Link = require('react-router-dom').Link;
-var PlayerPreview = require('./PlayerPreview');
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import PlayerPreview from './PlayerPreview';
 
 class PlayerInput extends React.Component {
   constructor(props) {
@@ -63,7 +63,7 @@ PlayerInput.defaultProps = {
   label: 'Username'
 };
 
-class Battle extends React.Component {
+export default class Battle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -160,5 +160,3 @@ class Battle extends React.Component {
     );
   }
 }
-
-module.exports = Battle;

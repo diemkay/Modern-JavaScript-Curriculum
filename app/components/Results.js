@@ -1,13 +1,13 @@
-var React = require('react');
-var PropTypes = require('prop-types');
-var queryString = require('query-string');
-var api = require('../utils/api');
-var Link = require('react-router-dom').Link;
-var PlayerPreview = require('./PlayerPreview');
-var Loading = require('./Loading');
+import React from 'react';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
+import api from '../utils/api';
+import { Link } from 'react-router-dom';
+import PlayerPreview from './PlayerPreview';
+import Loading from './Loading';
 
 function Profile(props) {
-  var info = props.info;
+  var info = props.info; // TODO: REFACTOR ME!
 
   return (
     <PlayerPreview username={info.login} avatar={info.avatar_url}>
@@ -48,7 +48,7 @@ Player.propTypes = {
   profile: PropTypes.object.isRequired
 };
 
-class Results extends React.Component {
+export default class Results extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -111,5 +111,3 @@ class Results extends React.Component {
     );
   }
 }
-
-module.exports = Results;
